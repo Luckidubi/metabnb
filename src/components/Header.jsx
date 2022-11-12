@@ -5,14 +5,15 @@ function Header() {
   return (
     <>
       <Box
-        maxW="1240px"
+
+maxW="1240px"
         h="48px"
         top="43px"
         left={{ lg: "50px", xl: "100px" }}
         right={{ lg: "50px", xl: "100px" }}
         position="absolute"
       >
-        <Flex w="full" position="relative">
+        <Flex  maxW="1240px"position="relative">
           <Box boxShadow="rgba(96,96,96,0.15)">
             <Image
               w={{ md: "140px", lg: "180px", xl: "233px" }}
@@ -32,7 +33,6 @@ function Header() {
             fontWeight="400"
             fontSize={{ lg: "18px", xl: "20px" }}
             color="#434343"
-            
           >
             <li>
               <Link to="/">Home</Link>
