@@ -1,0 +1,131 @@
+.metabnb__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  gap: 9%;
+}
+
+.metabnb__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.metabnb__navbar-links_logo {
+  margin-right: 163px;
+}
+.metabnb__navbar-links_logo img {
+  width: 233px;
+  height: 36.67px;
+  cursor: pointer;
+}
+.metabnb__navbar-links_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.metabnb__navbar-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.metabnb__navbar-links_container p,
+.metabnb__navbar-menu_container-links p {
+  color: #434343;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.metabnb__navbar-sign button,
+.button {
+  font-family: var(--font-family);
+  font-style: normal;
+  color: #ffffff;
+  border-radius: 10px;
+  background: var(--bg-gradient);
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 0;
+}
+.metabnb__navbar-menu {
+  margin-left: 1rem;
+  display: none;
+  position: relative;
+}
+
+.metabnb__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  background: #ffffff;
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: #434343;
+}
+.metabnb__navbar-menu_container p {
+  margin: 1rem 0;
+}
+.metabnb__navbar-menu-button {
+  display: none;
+}
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .metabnb__navbar-links_container {
+    display: none;
+  }
+  .metabnb__navbar-menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 700px) {
+  .metabnb__navbar {
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .metabnb__navbar {
+    padding: 2rem;
+  }
+  .metabnb__navbar-sign {
+    display: none;
+  }
+
+  .metabnb__navbar-menu_container {
+    top: 20px;
+  }
+  .metabnb__navbar-menu-button {
+    display: block;
+  }
+  .metabnb__navbar-menu-button button {
+    padding: 0.5rem 3rem;
+  }
+}
