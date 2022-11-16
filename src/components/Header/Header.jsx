@@ -141,10 +141,12 @@ const Header = () => {
           top="742px"
           bg="linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)"
         ></Box> */}
-      <Box className="metabnb__header section__padding">
+      <Box className="metabnb__header  section__padding">
         <Box className="metabnb__header-content">
           <h1 className="header-text">
-            Rent a Place away from Home in the Metaverse
+            Rent a <span className="span">Place</span> away from{" "}
+            <span className="span">Home</span> in the{" "}
+            <span className="span">Metaverse</span>
           </h1>
           <p>
             {" "}

@@ -1,0 +1,79 @@
+.nftcard__container {
+  background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+
+  border: 1px solid #d7d7d7;
+  border-radius: 15px;
+ 
+}
+
+.nftcard__imagebox img {
+  box-sizing: border-box;
+  margin: 0.7rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 15px;
+  max-width: 260px;
+  height: 265px;
+}
+.nftcard__imagebox {
+  position: relative;
+}
+.nftcard__name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+.nftcard__name-price p {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #434343;
+  padding: 0 1rem;
+}
+.nftcard__name-price :nth-child(2) {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+  color: #434343;
+}
+.nftcard__distance-vacancy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8rem;
+  gap: 1px;
+}
+
+.nftcard__distance-vacancy p {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+
+  color: #434343;
+}
+
+.heart {
+  position: absolute;
+
+  right: 6.33%;
+  top: 3%;
+
+  width: 20px;
+  border: none;
+  color: #d7d7d7;
+}
+
+.nftcard__ratings {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0.7rem;
+  margin: 0rem 0 1rem;
+}

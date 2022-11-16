@@ -1,0 +1,11 @@
+
+.ratings{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.ratings img{
+    padding: 0 8px 0 0;
+}

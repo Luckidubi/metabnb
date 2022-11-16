@@ -75,6 +75,7 @@
   min-width: 210px;
   border-radius: 5px;
   box-shadow: #434343;
+  z-index: 1;
 }
 .metabnb__navbar-menu_container p {
   margin: 1rem 0;
