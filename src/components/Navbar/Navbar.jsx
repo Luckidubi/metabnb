@@ -1,10 +1,24 @@
-import { Box, Flex, Image, Spacer, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Spacer,
+  Button,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+} from "@chakra-ui/react";
 import metaBnb from "/src/assets/MetaBnbIcon.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./Navbar.css";
 function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => {
     setToggleMenu((t) => !t);
@@ -30,11 +44,13 @@ function Navbar() {
 
   return (
     <>
-
       <Box className="metabnb__navbar">
         <Box className="metabnb__navbar-links">
           <Box className="metabnb__navbar-links_logo">
-        <Link to="/">    <img src={metaBnb} alt="metabnb icon" /></Link>
+            <Link to="/">
+              {" "}
+              <img src={metaBnb} alt="metabnb icon" />
+            </Link>
           </Box>
 
           <Box className="metabnb__navbar-links_container">
@@ -43,7 +59,29 @@ function Navbar() {
         </Box>
 
         <Box className="metabnb__navbar-sign">
-          <Button colorScheme="">Connect Wallet</Button>
+          <Button onClick={onOpen} colorScheme="">
+            Connect Wallet
+          </Button>
+
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Connect Wallet</ModalHeader>
+              <ModalCloseButton />
+              <hr />
+              <ModalBody
+                color="#333333"
+                fontFamily="Red Rose"
+                fontSize="16px"
+                fontWeight="400"
+                margin="1rem 0"
+              >
+                Choose your preferred wallet
+                <Image src="/src/assets/metamuskwallet.svg" />
+                <Image src="/src/assets/walletconnect.svg" />
+              </ModalBody>
+            </ModalContent>
+          </Modal>
         </Box>
         <Box className="metabnb__navbar-menu">
           {toggleMenu ? (
@@ -57,7 +95,7 @@ function Navbar() {
               <Box className="metabnb__navbar-menu_container-links">
                 <Menu />
                 <Box className="metabnb__navbar-menu-button">
-                  <button className="button" colorScheme="">
+                  <button onClick={onOpen} className="button" colorScheme="">
                     Connect Wallet
                   </button>
                 </Box>
