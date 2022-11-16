@@ -1,0 +1,27 @@
+.metabnb__brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 100px;
+  gap: 264px;
+  flex-direction: row;
+  background: var(--bg-gradient);
+  min-height: 74px;
+}
+
+.metabnb__brand div {
+  flex: 1;
+  max-width: 150px;
+  min-width: 120px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1050px){
+  .metabnb__brand {
+    gap: 50px
+  }
+}

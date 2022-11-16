@@ -1,0 +1,86 @@
+@import url(/src/components/Navbar/Navbar.css);
+
+.menu__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 0 0 1rem;
+  gap: 3rem;
+  width: 100%;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.menu__filter {
+  padding: 1rem 0;
+  margin: 2rem 0 0 1rem;
+}
+
+.menu__links p {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #434343;
+}
+.mobile__menu{
+    display: none;
+}
+.menu__filter button {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+  color-scheme: white;
+
+  text-align: center;
+
+  color: #333333;
+  background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+}
+
+@media screen and (max-width: 1050px) {
+  .menu__links {
+    display: none;
+  }
+  .mobile__menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 700px) {
+  .metabnb__navbar {
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .metabnb__navbar {
+    padding: 2rem;
+  }
+  .metabnb__navbar-sign {
+    display: none;
+  }
+
+  .metabnb__navbar-menu_container {
+    top: 20px;
+  }
+  .metabnb__navbar-menu-button {
+    display: block;
+  }
+  .metabnb__navbar-menu-button button {
+    padding: 0.5rem 3rem;
+  }
+}

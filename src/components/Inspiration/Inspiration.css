@@ -1,0 +1,44 @@
+.metabnb__inspiration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.metabnb__inspiration h2 {
+  font-family: "Red Rose";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #000000;
+  margin: 2rem 0;
+}
+
+.metabnb__inspiration-card__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem
+}
+
+@media screen and (max-width: 1050px) {
+    .metabnb__inspiration-card__list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .metabnb__inspiration-card__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .metabnb__inspiration-card__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .metabnb__inspiration h2{
+        margin: 0 1rem 2rem 1rem;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+  }

@@ -18,6 +18,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -26,16 +28,30 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-}
-ol, ul, li {
-	list-style: none;
+	font-family: var(--font-family);
 
 }
-li:hover, li:active{
-  text-decoration: underline;
+
+.section__padding{
+	padding: 4rem 6rem
+}
+.section__margin{
+	margin: 4rem, 4rem;
 }
 
-html {
-  font-family: "Red Rose", cursive;
-  font-size: 16px;
+@media screen and (max-width: 700px){
+	.section__padding{
+		padding: 4rem;
+	}
+	.section__margin{
+		margin: 4rem;
+	}
+}
+@media screen and (max-width: 550px){
+	.section__padding{
+		padding: 4rem 2rem;
+	}
+	.section__margin{
+		margin: 4rem 2rem;
+	}
 }
