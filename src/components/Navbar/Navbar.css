@@ -98,6 +98,11 @@
     transform: scale(1);
   }
 }
+@media screen and (max-width: 1280px) {
+  .metabnb__navbar-links_container p {
+    font-size: 1.1rem;
+  }
+}
 
 @media screen and (max-width: 1050px) {
   .metabnb__navbar-links_container {
@@ -128,5 +133,6 @@
   }
   .metabnb__navbar-menu-button button {
     padding: 0.5rem 3rem;
+    font-size: 14px;
   }
 }

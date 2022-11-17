@@ -7,7 +7,7 @@ import Opensea from "/src/assets/Opensea.svg";
 function Brand() {
   return (
     <>
-      <Box className="metabnb__brand  section__padding">
+      <Box className="metabnb__brand">
         <Box>
           <img src={Mbtoken} alt="Mbtoken icon" />
         </Box>
