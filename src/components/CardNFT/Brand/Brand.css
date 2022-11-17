@@ -8,6 +8,7 @@
   flex-direction: row;
   background: var(--bg-gradient);
   min-height: 74px;
+  width: 100%;
 }
 
 .metabnb__brand div {
@@ -20,8 +21,8 @@
   align-items: center;
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   .metabnb__brand {
-    gap: 50px
+    gap: 1rem;
   }
 }

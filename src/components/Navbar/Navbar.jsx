@@ -17,6 +17,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./Navbar.css";
+import walletconnect from "/src/assets/walletconnect.svg";
+import downChevron from "/src/assets/Down Chevron.svg";
+import metamsk from "/src/assets/metamsk.svg";
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -65,20 +68,69 @@ function Navbar() {
 
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent>
+            <ModalContent  fontFamily="Red Rose" borderRadius="16px">
               <ModalHeader>Connect Wallet</ModalHeader>
               <ModalCloseButton />
               <hr />
               <ModalBody
                 color="#333333"
-                fontFamily="Red Rose"
+
                 fontSize="16px"
                 fontWeight="400"
                 margin="1rem 0"
               >
                 Choose your preferred wallet
-                <Image src="/src/assets/metamuskwallet.svg" />
-                <Image src="/src/assets/walletconnect.svg" />
+                <Box
+                  boxSizing="border-box"
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  align-items="center"
+                  p="12px 20px"
+                  gap="135px"
+                  bg="#F8F9FA"
+                  border="1px solid #CFD8DC"
+                  borderRadius="12px"
+                  my="16px"
+                  _hover={{cursor:'pointer', }}
+                >
+                  <Box>
+                    <Image
+                      h="44px"
+                      maxW="156px"
+                      src={metamsk}
+                      alt="metamask logo"
+                    />
+                  </Box>
+                  <Box alignSelf="center">
+                    <Image src={downChevron} alt="down chevron icon" />
+                  </Box>
+                </Box>
+                <Box
+                  boxSizing="border-box"
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  align-items="center"
+                  p="12px 20px"
+                  gap="135px"
+                  bg="#F8F9FA"
+                  border="1px solid #CFD8DC"
+                  borderRadius="12px"
+                  _hover={{cursor:'pointer', }}
+                >
+                  <Box>
+                    <Image
+                      h="44px"
+                      maxW="156px"
+                      src={walletconnect}
+                      alt="walletconnect logo"
+                    />
+                  </Box>
+                  <Box alignSelf="center">
+                    <Image src={downChevron} alt="down chevron icon" />
+                  </Box>
+                </Box>
               </ModalBody>
             </ModalContent>
           </Modal>
